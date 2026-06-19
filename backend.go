@@ -20,7 +20,7 @@ import (
 )
 
 const (
-	Namespace = "github.com/pucora/velonetics-lambda"
+	Namespace = "github.com/pucora/pucora-lambda"
 )
 
 var (

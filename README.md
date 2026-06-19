@@ -1,4 +1,4 @@
-# velonetics-lambda
+# pucora-lambda
 
 consume lambda functions through a Pucora API Gateway
 

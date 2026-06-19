@@ -1,4 +1,4 @@
-module github.com/pucora/velonetics-lambda/v2
+module github.com/pucora/pucora-lambda/v2
 
 go 1.23.0
 

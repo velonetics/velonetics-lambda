@@ -11,7 +11,7 @@ import (
 	"testing"
 	"time"
 
-	veloneticslambda "github.com/pucora/velonetics-lambda/v2"
+	pucoralambda "github.com/pucora/pucora-lambda/v2"
 	"github.com/pucora/lura/v2/config"
 	"github.com/pucora/lura/v2/logging"
 	"github.com/pucora/lura/v2/proxy"
@@ -27,7 +27,7 @@ func TestLocalStack(t *testing.T) {
 
 	logger, _ := logging.NewLogger("ERROR", os.Stdout, "")
 
-	bf := veloneticslambda.BackendFactory(logger, explosiveBF)
+	bf := pucoralambda.BackendFactory(logger, explosiveBF)
 
 	for i, tc := range []struct {
 		Name        string
@@ -111,7 +111,7 @@ func TestLocalStack(t *testing.T) {
 			remote := &config.Backend{
 				Method: tc.Method,
 				ExtraConfig: config.ExtraConfig{
-					veloneticslambda.Namespace: extra,
+					pucoralambda.Namespace: extra,
 				},
 			}
 			if tc.Key != "" {
@@ -120,7 +120,7 @@ func TestLocalStack(t *testing.T) {
 			if tc.Function != "" {
 				extra["function_name"] = tc.Function
 			}
-			remote.ExtraConfig[veloneticslambda.Namespace] = extra
+			remote.ExtraConfig[pucoralambda.Namespace] = extra
 
 			ctx, cancel := context.WithTimeout(context.Background(), time.Second)
 			defer cancel()
