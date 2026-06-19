@@ -11,10 +11,10 @@ import (
 	"testing"
 	"time"
 
-	veloneticslambda "github.com/velonetics/velonetics-lambda/v2"
-	"github.com/velonetics/lura/v2/config"
-	"github.com/velonetics/lura/v2/logging"
-	"github.com/velonetics/lura/v2/proxy"
+	veloneticslambda "github.com/pucora/velonetics-lambda/v2"
+	"github.com/pucora/lura/v2/config"
+	"github.com/pucora/lura/v2/logging"
+	"github.com/pucora/lura/v2/proxy"
 )
 
 var endpoint = flag.String("aws_endpoint", "http://192.168.99.100:4574", "url of the localstack's endpoint")

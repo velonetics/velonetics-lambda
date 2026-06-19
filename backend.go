@@ -13,21 +13,21 @@ import (
 	"github.com/aws/aws-sdk-go/aws/request"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/lambda"
-	"github.com/velonetics/lura/v2/config"
-	"github.com/velonetics/lura/v2/core"
-	"github.com/velonetics/lura/v2/logging"
-	"github.com/velonetics/lura/v2/proxy"
+	"github.com/pucora/lura/v2/config"
+	"github.com/pucora/lura/v2/core"
+	"github.com/pucora/lura/v2/logging"
+	"github.com/pucora/lura/v2/proxy"
 )
 
 const (
-	Namespace = "github.com/velonetics/velonetics-lambda"
+	Namespace = "github.com/pucora/velonetics-lambda"
 )
 
 var (
 	errBadStatusCode = errors.New("aws lambda: bad status code")
 	errNoConfig      = errors.New("aws lambda: no extra config defined")
 	errBadConfig     = errors.New("aws lambda: unable to parse the defined extra config")
-	clientContext    = base64.StdEncoding.EncodeToString([]byte(`{"client":"Velonetics", "version":"` + core.VeloneticsVersion + `"}`))
+	clientContext    = base64.StdEncoding.EncodeToString([]byte(`{"client":"Pucora", "version":"` + core.PucoraVersion + `"}`))
 )
 
 type Invoker interface {

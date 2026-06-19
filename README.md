@@ -1,6 +1,6 @@
 # velonetics-lambda
 
-consume lambda functions through a Velonetics API Gateway
+consume lambda functions through a Pucora API Gateway
 
 ## Local test
 
